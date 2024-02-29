@@ -1,5 +1,6 @@
 import Hello from "./component/Hello"
 import Welcome from "./component/Welcome"
+import { WelcomeOther } from "./component/WelcomeOther"
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       <Hello></Hello>
       {/* arrow function */}
       <Welcome />
+      <WelcomeOther />
     </div>
   )
 }
