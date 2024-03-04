@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
-import ChildOne from './ChildOne'
+import ChildTwo from './ChildTwo'
 
-const ParentOne = () => {
+const ParentTwo = () => {
 
     const [parentName, setParentName] = useState('')
 
@@ -13,16 +13,17 @@ const ParentOne = () => {
     return (
         <>
             <div>
-                <p>This is parent one.</p>
+                <p>This is parent two.</p>
                 <p>
                     Name : <input type="text" name="name" id="name" onChange={handleChange} value={parentName} />
                 </p>
             </div>
             <div>
-                <ChildOne parentName={parentName} />
+                {/* via callback child change parent data */}
+                <ChildTwo parentName={parentName} handleChange={handleChange} />
             </div>
         </>
     )
 }
 
-export default ParentOne
+export default ParentTwo
